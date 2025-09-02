@@ -1,4 +1,4 @@
-package com.anonymous.linkbeam
+package com.silaschalwe.linkbeam
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build

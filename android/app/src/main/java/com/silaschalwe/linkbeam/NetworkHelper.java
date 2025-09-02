@@ -1,4 +1,4 @@
-package com.anonymous.linkbeam;
+package com.silaschalwe.linkbeam;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

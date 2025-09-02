@@ -87,9 +87,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.anonymous.linkbeam'
+    namespace 'com.silaschalwe.linkbeam'
     defaultConfig {
-        applicationId 'com.anonymous.linkbeam'
+        applicationId 'com.silaschalwe.linkbeam'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
