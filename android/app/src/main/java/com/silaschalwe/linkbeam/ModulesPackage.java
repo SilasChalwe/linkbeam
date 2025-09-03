@@ -1,4 +1,4 @@
-package com.anonymous.linkbeam;
+package com.silaschalwe.linkbeam;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.NativeModule;
@@ -14,10 +14,11 @@ public class ModulesPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        
-        modules.add(new SimpleHttpServer(reactContext));
+
+        // Correct class names
+        modules.add(new SimpleHttpServerModule(reactContext));
         modules.add(new NetworkHelper(reactContext));
-        
+
         return modules;
     }
 

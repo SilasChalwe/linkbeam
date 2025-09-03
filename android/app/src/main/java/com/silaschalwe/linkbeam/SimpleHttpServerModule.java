@@ -1,4 +1,4 @@
-package com.anonymous.linkbeam;
+package com.silaschalwe.linkbeam;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
