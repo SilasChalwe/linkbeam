@@ -2,92 +2,106 @@ import { Image } from 'expo-image';
 import { Platform, StyleSheet } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
-import { ExternalLink } from '@/components/ExternalLink';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{ light: '#FFFFFF', dark: '#000000' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
+        <Image
+          source={require('@/assets/images/linkbeam-logo.png')}
+          style={styles.logoHeader}
+          contentFit="contain"
         />
       }>
+      {/* Title Section */}
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
+        <ThemedText type="title">About LinkBeam</ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
-      <Collapsible title="File-based routing">
+
+      {/* Intro Text */}
+      <ThemedText>
+        <ThemedText type="defaultSemiBold">LinkBeam</ThemedText> is a fast and
+        secure file-sharing app that works directly over{' '}
+        <ThemedText type="defaultSemiBold">WiFi</ThemedText>, with no internet
+        required. It is designed and developed by{' '}
+        <ThemedText type="defaultSemiBold">The Compiler Corporation</ThemedText>, 
+        a proud subsidiary of{' '}
+        <ThemedText type="defaultSemiBold">NextInnoMind</ThemedText>. Our goal
+        is to make file transfer between phones and desktops seamless, private,
+        and lightning quick.
+      </ThemedText>
+
+      {/* Collapsibles */}
+      <Collapsible title="Who We Are">
         <ThemedText>
-          This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
+          <ThemedText type="defaultSemiBold">
+            The Compiler Corporation
+          </ThemedText>{' '}
+          is an innovation-driven company under{' '}
+          <ThemedText type="defaultSemiBold">NextInnoMind</ThemedText>. Our
+          mission is to create software that empowers people to share,
+          collaborate, and connect. LinkBeam is one of our flagship projects
+          that reflects this commitment.
         </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
-          sets up the tab navigator.
-        </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
       </Collapsible>
-      <Collapsible title="Android, iOS, and web support">
+
+      <Collapsible title="Our Vision for LinkBeam">
         <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
+          LinkBeam is built to eliminate the need for cables, slow transfers,
+          and third-party servers. Whether you’re a student, entrepreneur, or
+          professional, LinkBeam helps you beam files instantly across devices
+          using just WiFi.
         </ThemedText>
       </Collapsible>
-      <Collapsible title="Images">
+
+      <Collapsible title="Cross-Platform Support">
         <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
-          different screen densities
+          LinkBeam works across{' '}
+          <ThemedText type="defaultSemiBold">Android</ThemedText>,{' '}
+          <ThemedText type="defaultSemiBold">iOS</ThemedText>, and{' '}
+          <ThemedText type="defaultSemiBold">desktop</ThemedText>. Share photos,
+          videos, documents, or any files — all without needing internet or
+          cloud services.
         </ThemedText>
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
       </Collapsible>
-      <Collapsible title="Custom fonts">
+
+      <Collapsible title="Brand Identity">
         <ThemedText>
-          Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
-          <ThemedText style={{ fontFamily: 'SpaceMono' }}>
-            custom fonts such as this one.
-          </ThemedText>
+          The name <ThemedText type="defaultSemiBold">LinkBeam</ThemedText>{' '}
+          represents a beam of connection that links devices together. It
+          reflects our vision of fast, secure, and effortless file sharing,
+          powered by innovation and simplicity.
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/versions/latest/sdk/font">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
+        {/* Inline Logo */}
+        <Image
+          source={require('@/assets/images/linkbeam-logo.png')}
+          style={styles.inlineLogo}
+          contentFit="contain"
+        />
       </Collapsible>
-      <Collapsible title="Light and dark mode components">
+
+      <Collapsible title="Dark & Light Mode">
         <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
+          LinkBeam adapts to your system settings with both light and dark mode
+          support, ensuring a smooth and personalized user experience.
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
       </Collapsible>
-      <Collapsible title="Animations">
+
+      <Collapsible title="Powered by Innovation">
         <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful <ThemedText type="defaultSemiBold">react-native-reanimated</ThemedText>{' '}
-          library to create a waving hand animation.
+          Every feature inside LinkBeam is crafted for speed, security, and
+          simplicity. With no internet dependency, LinkBeam ensures your files
+          stay private while transfers remain lightning fast.
         </ThemedText>
         {Platform.select({
           ios: (
             <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
+              iOS users also enjoy an elegant parallax header effect for a
+              polished look.
             </ThemedText>
           ),
         })}
@@ -97,14 +111,21 @@ export default function TabTwoScreen() {
 }
 
 const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
+  logoHeader: {
+    width: '100%',
+    height: 200,
+    alignSelf: 'center',
+    marginTop: 20,
+  },
+  inlineLogo: {
+    width: 120,
+    height: 120,
+    alignSelf: 'center',
+    marginTop: 12,
   },
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+    marginTop: 10,
   },
 });
